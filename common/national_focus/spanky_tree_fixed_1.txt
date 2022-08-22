@@ -1,0 +1,550 @@
+focus_tree = {
+	id = New_file
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GAB
+		}
+	}
+	default = no
+	focus = {
+		id = An_American_Economy
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		x = 37
+		y = 2
+
+	}
+
+	focus = {
+		id = Deal_with_the_Russians
+		icon = GFX_zFlag BurningSpanky
+		cost = 10.00
+		x = 14
+		y = 0
+		completion_reward = {
+			add_manpower = -12632
+		}
+	
+	}
+	focus = {
+		id = National_Rebirth
+		icon = GFX_zNationalRebirth
+		cost = 10.00
+		prerequisite = {
+			focus = Deal with the Russians
+		}
+		x = 14
+		y = 1
+
+	}
+	focus = {
+		id = Our_Unfortunate_Position
+		icon = GFX_focus_gab_Our_Unfortunate_Situation
+		cost = 10.00
+		prerequisite = {
+			focus = National_Rebirth
+		}
+		x = 14
+		y = 2
+
+	}
+	focus = {
+		id = Work_With_the_Japanese
+		icon = GFX_Work With the Japanese
+		cost = 10.00
+		prerequisite = {
+			focus = Our_Unfortunate_Position
+		}
+		completion_reward = {
+			add_stability = 15
+			add_war_support = 5
+			add_manpower = 7500
+		}
+		x = 12
+		y = 3
+
+	}
+	focus = {
+		id = Watch_the_Border
+		icon = GFX_watchborder
+		cost = 10.00
+		prerequisite = {
+			focus = Our_Unfortunate_Position
+		}
+		x = 14
+		y = 3
+		completion_reward = {
+			create_intelligence_agency = {
+    name = "O.S.S."
+    icon = GFX_intelligence_agency_logo_agency
+		}
+		add_intel = {
+    target = ERU
+    civilian_intel = 3
+    army_intel = 3
+    navy_intel = 3
+    airforce_intel = 3 
+	}
+		}
+			}
+	focus = {
+		id = Organize_the_Militias
+		icon = GFX_Organize
+		cost = 10.00
+		prerequisite = {
+			focus = Our_Unfortunate_Position
+		}
+		x = 16
+		y = 3
+		completion_reward = {
+			add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 5000
+    producer = USA
+}
+
+		}
+
+	}
+	focus = {
+		id = Ride_or_Die
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_alternative
+		cost = 10.00
+		prerequisite = {
+			focus = Watch_the_Border
+			focus = Organize_the_Militias
+			focus = Work_With_the_Japanese
+		}
+		x = 14
+		y = 4
+	}
+	focus = {
+		id = Our_Fellow_Americans
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		cost = 10.00
+		prerequisite = {
+			focus = Ride_or_Die
+		}
+		mutually_exclusive = {
+			focus = Suffer_Not_the_Traitor
+		}
+		x = 5
+		y = 5
+		completion_reward = {
+			give_guarantee USA
+		}
+
+	}
+	focus = {
+		id = Suffer_Not_the_Traitor
+		icon = GFX_focus_eng_crush_the_dream
+		cost = 10.00
+		prerequisite = {
+			focus = Ride_or_Die
+		}
+		mutually_exclusive = {
+			focus = Our_Fellow_Americans
+		}
+		x = 23
+		y = 5
+
+	}
+	focus = {
+		id = War_on_the_Horizon
+		icon = GFX_focus_ger_great_red_menace
+		cost = 1.00
+		prerequisite = {
+			focus = Suffer_Not_the_Traitor
+			focus = Our_Fellow_Americans
+		}
+		x = 14
+		y = 6
+		completion_reward = {
+			add_war_support = 15
+		}
+
+	}
+	focus = {
+		id = Sweep_Up_Erusia
+		icon = GFX_ErusiaInvasion
+		cost = 10.00
+		prerequisite = {
+			focus = War_on_the_Horizon
+		}
+		x = 14
+		y = 7
+
+	}
+	focus = {
+		id = A_Deal_with_the_Aviators
+		icon = GFX_focus_SOV_women_in_aviation
+		cost = 10.00
+		prerequisite = {
+			focus = Sweep_Up_Erusia
+		}
+		x = 14
+		y = 8
+
+	}
+	focus = {
+		id = Nasod_Ultimatium
+		icon = GFX_NasodInvasion
+		cost = 10.00
+		prerequisite = {
+			focus = A_Deal_with_the_Aviators
+		}
+		x = 14
+		y = 9
+
+	}
+	focus = {
+		id = An_Incredibly_Stupid_Move
+		icon = GFX_PhoInvasion
+		cost = 10.00
+		prerequisite = {
+			focus = A_Deal_with_the_Aviators
+		}
+		x = 17
+		y = 9
+
+	}
+	focus = {
+		id = A_Polite_Letter
+		icon = GFX_APoliteLetter
+		cost = 10.00
+		prerequisite = {
+			focus = Suffer_Not_the_Traitor
+		}
+		x = 20
+		y = 6
+
+	}
+	focus = {
+		id = Propaganda_Storm
+		icon = GFX_zPropagandaStorm
+		cost = 10.00
+		prerequisite = {
+			focus = A_Polite_Letter
+		}
+		x = 20
+		y = 8
+
+	}
+	focus = {
+		id = Terrorism
+		icon = GFX_Terrorism1
+		cost = 10.00
+		prerequisite = {
+			focus = Suffer_Not_the_Traitor
+		}
+		x = 23
+		y = 6
+
+	}
+	focus = {
+		id = Organize_Terrorists
+		icon = GFX_Terrorism2
+		cost = 10.00
+		prerequisite = {
+			focus = Terrorism
+		}
+		x = 23
+		y = 8
+
+	}
+	focus = {
+		id = Whoo_Anti-Communists
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = Suffer_Not_the_Traitor
+		}
+		x = 26
+		y = 6
+
+	}
+	focus = {
+		id = Ban_the_Metric_System
+		icon = GFX_zMetric
+		cost = 10.00
+		prerequisite = {
+			focus = Whoo_Anti-Communists
+		}
+		x = 26
+		y = 8
+
+	}
+	focus = {
+		id = Insurgency
+		icon = GFX_focus_BUL_condemn_macedonian_organizations
+		cost = 10.00
+		prerequisite = {
+			focus = Organize_Terrorists
+		}
+		prerequisite = {
+			focus = Ban_the_Metric_System
+		}
+		prerequisite = {
+			focus = Propaganda_Storm
+		}
+		x = 23
+		y = 10
+
+	}
+	focus = {
+		id = Tackle_the_Zaibatsu
+		icon = GFX_focus_jap_zaibatsu
+		cost = 10.00
+		prerequisite = {
+			focus = An_American_Economy
+		}
+		x = 37
+		y = 3
+
+	}
+	focus = {
+		id = All-American_Front
+		icon = GFX_AllAmericanFront
+		cost = 10.00
+		prerequisite = {
+			focus = Our_Fellow_Americans
+		}
+		x = 5
+		y = 6
+		completion_reward 
+
+	}
+	focus = {
+		id = Unified_Military_Command
+		icon = GFX_focus_generic_military_dictatorship
+		cost = 10.00
+		prerequisite = {
+			focus = All-American_Front
+		}
+		x = 5
+		y = 8
+
+	}
+	focus = {
+		id = Economic_Aid
+		icon = GFX_focus_generic_industry_2
+		cost = 10.00
+		prerequisite = {
+			focus = Unified_Military_Command
+		}
+		x = 5
+		y = 9
+
+	}
+	focus = {
+		id = Information_Exchange
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = All-American_Front
+		}
+		x = 8
+		y = 7
+
+	}
+	focus = {
+		id = Government_Collaboration
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = The_First_Domino
+		}
+		prerequisite = {
+			focus = Unfied_War_Aims
+		}
+		x = 5
+		y = 12
+
+	}
+	focus = {
+		id = Unfied_War_Aims
+		icon = GFX_focus_chi_flying_tigers
+		cost = 10.00
+		prerequisite = {
+			focus = Economic_Aid
+		}
+		x = 5
+		y = 10
+
+	}
+	focus = {
+		id = Purge_Communists
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Information_Exchange
+		}
+		x = 8
+		y = 9
+
+	}
+	focus = {
+		id = Equipment_Standardization
+		icon = GFX_focus_focus_fra_maquis
+		cost = 10.00
+		prerequisite = {
+			focus = All-American_Front
+		}
+		x = 2
+		y = 7
+
+	}
+	focus = {
+		id = The_First_Domino
+		icon = GFX_zFirstDomino
+		cost = 10.00
+		prerequisite = {
+			focus = Nasod_Ultimatium
+			focus = Insurgency
+			focus = Purge_Communists
+		}
+		x = 14
+		y = 11
+
+	}
+	focus = {
+		id = The_Civil_War_Revisited
+		icon = GFX_focus_usa_recruit_the_free_corps
+		cost = 10.00
+		prerequisite = {
+			focus = Insurgency
+		}
+		prerequisite = {
+			focus = Destroy_the_Imperials
+		}
+		x = 18
+		y = 15
+
+	}
+	focus = {
+		id = Destroy_the_Corporatists
+		icon = GFX_ZaibatsuInvasion
+		cost = 10.00
+		prerequisite = {
+			focus = The_First_Domino
+		}
+		x = 14
+		y = 13
+
+	}
+	focus = {
+		id = Destroy_the_Imperials
+		icon = GFX_Imperial Invasion
+		cost = 10.00
+		prerequisite = {
+			focus = Destroy_the_Corporatists
+		}
+		x = 14
+		y = 14
+
+	}
+	focus = {
+		id = North_Japan_Republic
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Tokyo_Secured
+		}
+		x = 14
+		y = 16
+
+	}
+	focus = {
+		id = Unify_The_States
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Contacts_In_America
+		}
+		prerequisite = {
+			focus = Destroy_the_Imperials
+		}
+		x = 10
+		y = 15
+
+	}
+	focus = {
+		id = Tokyo_Secured
+		icon = GFX_TakeTokyo
+		cost = 10.00
+		prerequisite = {
+			focus = Destroy_the_Imperials
+		}
+		x = 14
+		y = 15
+
+	}
+	focus = {
+		id = Contacts_In_America
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Government_Collaboration
+		}
+		x = 10
+		y = 13
+
+	}
+	focus = {
+		id = Consolidate_Our_Holdings
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = The_First_Domino
+		}
+		x = 19
+		y = 12
+
+	}
+	focus = {
+		id = The_Cobra_Plan
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Consolidate_Our_Holdings
+		}
+		x = 19
+		y = 13
+
+	}
+	focus = {
+		id = An_American_Consitution
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = North_Japan_Republic
+		}
+		x = 14
+		y = 17
+
+	}
+	focus = {
+		id = Sic_Semper_Tyrannis
+		icon = GFX_goal_generic_CAS
+		cost = 10.00
+		prerequisite = {
+			focus = The_Civil_War_Revisited
+		}
+		x = 18
+		y = 16
+
+	}
+	focus = {
+		id = Dominos_Keep_Falling
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = An_American_Consitution
+		}
+		x = 14
+		y = 18
+
+	}
+}
