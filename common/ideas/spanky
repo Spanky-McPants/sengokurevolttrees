@@ -1,0 +1,14 @@
+ideas = {
+	country = {
+
+		GAB_watch_the_border = {
+			picture = GAB_watch_the_border-294954
+				army_attack_factor = 0.05
+				army_defense_factor = 0.05
+
+
+
+			}
+		}
+	}
+}
